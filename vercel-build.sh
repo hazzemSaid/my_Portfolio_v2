@@ -2,7 +2,7 @@
 set -e
 
 echo "Downloading Dart SDK..."
-wget -qO dart-sdk.zip https://storage.googleapis.com/dart-archive/channels/stable/release/latest/sdk/dartsdk-linux-x64-release.zip
+curl -fsSL -o dart-sdk.zip https://storage.googleapis.com/dart-archive/channels/stable/release/latest/sdk/dartsdk-linux-x64-release.zip
 unzip -q -o dart-sdk.zip
 export PATH="$PWD/dart-sdk/bin:$PATH"
 
