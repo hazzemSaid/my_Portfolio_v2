@@ -236,18 +236,37 @@ body {
 }
 
 @keyframes rotate-circle-1 {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 @keyframes rotate-circle-2 {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 @keyframes pulse-black-circle {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); background: rgba(0, 0, 0, 0.05); }
-  50% { transform: translate(-50%, -50%) scale(1.05); background: rgba(0, 0, 0, 0.1); }
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    background: rgba(0, 0, 0, 0.1);
+  }
 }
 
 .hero-content {
@@ -814,10 +833,12 @@ body {
    ========================================================================== */
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
@@ -828,6 +849,7 @@ body {
     opacity: 0;
     transform: translateY(18px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -839,6 +861,7 @@ body {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -850,6 +873,7 @@ body {
     opacity: 0;
     transform: translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -861,6 +885,7 @@ body {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -907,7 +932,7 @@ body {
     - Keep transitions for accessibility (focus states, etc.)
     - Elements appear immediately instead of animating
   */
-  
+
   /* Disable all entrance animations */
   [class*="animation:"]:not(.prefers-motion),
   [class*="animate-"],
@@ -927,7 +952,7 @@ body {
   .resume-column-title,
   .skill-card,
   .project-showcase-card,
-  .footer > p,
+  .footer>p,
   .footer-header p,
   .footer-links,
   .section {
@@ -935,7 +960,7 @@ body {
     opacity: 1 !important;
     transform: none !important;
   }
-  
+
   /* Keep smooth transitions for interactive elements */
   button,
   a,
@@ -945,7 +970,7 @@ body {
   .footer-link {
     transition: color 0.2s ease, background-color 0.2s ease !important;
   }
-  
+
   /* Disable transform-based hover animations */
   button:hover,
   a:hover,
@@ -980,7 +1005,7 @@ body {
   color: var(--color-text-muted);
 }
 
-.footer > p {
+.footer>p {
   margin: 0;
   font-weight: 600;
   color: #000000;
@@ -1156,3 +1181,97 @@ body {
   }
 }
 
+/* NEW PROFESSIONAL UI STYLES */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  animation: fade-in-down 0.6s ease-out;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2ebd59;
+  box-shadow: 0 0 0 4px rgba(46, 189, 89, 0.2);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 189, 89, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(46, 189, 89, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 189, 89, 0);
+  }
+}
+
+.about-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech-pill {
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-icon {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
