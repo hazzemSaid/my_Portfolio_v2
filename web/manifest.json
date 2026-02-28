@@ -1,0 +1,35 @@
+{
+  "name": "Hazem Said Portfolio",
+  "short_name": "Hazem Portfolio",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#FF006E",
+  "description": "Professional Flutter developer portfolio showcasing mobile and web applications with modern design.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "assets/images/profile.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favTeam.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
+
